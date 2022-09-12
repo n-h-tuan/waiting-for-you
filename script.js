@@ -28,12 +28,22 @@ else {
 }
 // Automatically play sound
 var sound = new Howl({
-    src: ['assets/sounds/only_love.mp3']
+    src: ['assets/sounds/only_love.mp3'],
+    loop: true,
+    volume: 0.7
 });
-// document.getElementById('click_audio').addEventListener("click", function(){
-//     sound.play();
-// })
-sound.play();
+var buttonPlaySound = document.getElementsByClassName('sound-button');
+buttonPlaySound.play.addEventListener("click", function(){
+    console.log(123);
+    sound.play();
+    buttonPlaySound.play.classList.add("hidden");
+    buttonPlaySound.pause.classList.remove("hidden");
+})
+buttonPlaySound.pause.addEventListener("click", function(){
+    sound.pause();
+    buttonPlaySound.pause.classList.add("hidden");
+    buttonPlaySound.play.classList.remove("hidden");
+})
 
 setInterval(function () {
     var time = getLeftTime();
