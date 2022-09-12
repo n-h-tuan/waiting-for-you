@@ -19,13 +19,21 @@ var timeDiv = document.getElementsByClassName("timer-display");
 var mainContainer = document.getElementById("main_container");
 
 // check window is landscape or portrait
-if(checkIsLandscapeOrientation()){
+if (checkIsLandscapeOrientation()) {
     mainContainer.classList.add('rand-bg-' + (Math.floor(Math.random() * 4 + 6)))
 
 }
-else{
+else {
     mainContainer.classList.add('rand-bg-' + (Math.floor(Math.random() * 4 + 1)))
 }
+// Automatically play sound
+var sound = new Howl({
+    src: ['assets/sounds/only_love.mp3']
+});
+// document.getElementById('click_audio').addEventListener("click", function(){
+//     sound.play();
+// })
+sound.play();
 
 setInterval(function () {
     var time = getLeftTime();
