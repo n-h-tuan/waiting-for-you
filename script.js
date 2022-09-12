@@ -29,20 +29,20 @@ else {
 // Automatically play sound
 var sound = new Howl({
     src: ['assets/sounds/only_love.mp3'],
+    autoplay: true,
     loop: true,
-    volume: 0.7
+    volume: 0.7,
 });
 var buttonPlaySound = document.getElementsByClassName('sound-button');
-buttonPlaySound.play.addEventListener("click", function(){
-    console.log(123);
-    sound.play();
-    buttonPlaySound.play.classList.add("hidden");
-    buttonPlaySound.pause.classList.remove("hidden");
+buttonPlaySound.sound.addEventListener("click", function(){
+    sound.mute(true);
+    buttonPlaySound.sound.classList.add("hidden");
+    buttonPlaySound.mute.classList.remove("hidden");
 })
-buttonPlaySound.pause.addEventListener("click", function(){
-    sound.pause();
-    buttonPlaySound.pause.classList.add("hidden");
-    buttonPlaySound.play.classList.remove("hidden");
+buttonPlaySound.mute.addEventListener("click", function(){
+    sound.mute(false);
+    buttonPlaySound.mute.classList.add("hidden");
+    buttonPlaySound.sound.classList.remove("hidden");
 })
 
 setInterval(function () {
