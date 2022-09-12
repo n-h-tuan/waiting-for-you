@@ -1,0 +1,60 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    overflow: hidden;
+}
+
+.main-container {
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+.rand-bg-1{
+    background-image: url("images/bg1.jpg");
+}
+.rand-bg-2{
+    background-image: url("images/bg2.jpg");
+}
+.rand-bg-3{
+    background-image: url("images/bg3.jpg");
+}
+.rand-bg-4{
+    background-image: url("images/bg4.jpg");
+}
+.rand-bg-5{
+    background-image: url("images/bg5.jpg");
+}
+.dark-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-color: rgba(0, 0, 0, .6);
+}
+.foreground-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    gap: 50px;
+}
+.timer-container{
+    width: 70%;
+    margin: 0 auto;
+}
+.title {
+    text-align: center;
+    font-size: 72pt;
+}
+@media (max-width: 576px) {
+    .timer-container {
+        width: 100%;
+    }
+    .title {
+        font-size: 35pt;
+    }
+}
