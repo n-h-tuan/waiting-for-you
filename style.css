@@ -26,6 +26,21 @@ body {
 .rand-bg-5{
     background-image: url("images/bg5.jpg");
 }
+.rand-bg-6{
+    background-image: url("images/bg6.jpg");
+}
+.rand-bg-7{
+    background-image: url("images/bg7.jpg");
+}
+.rand-bg-8{
+    background-image: url("images/bg8.jpg");
+}
+.rand-bg-9{
+    background-image: url("images/bg9.jpg");
+}
+.rand-bg-10{
+    background-image: url("images/bg10.jpg");
+}
 .dark-bg{
     position: absolute;
     top: 0;
@@ -45,6 +60,9 @@ body {
 .timer-container{
     width: 70%;
     margin: 0 auto;
+}
+.timer-display{
+    font-weight: 700;
 }
 .title {
     text-align: center;
