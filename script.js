@@ -52,3 +52,7 @@ setInterval(function () {
     timeDiv.minutes.innerHTML = time.minutes;
     timeDiv.seconds.innerHTML = time.seconds;
 }, 1000);
+
+setTimeout(function () {
+    document.getElementById("second_heart").style.display = "block";
+}, 800)

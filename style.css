@@ -11,37 +11,48 @@ body {
     background-repeat: no-repeat;
     color: white;
 }
-.rand-bg-1{
+
+.rand-bg-1 {
     background-image: url("assets/images/bg1.jpg");
 }
-.rand-bg-2{
+
+.rand-bg-2 {
     background-image: url("assets/images/bg2.jpg");
 }
-.rand-bg-3{
+
+.rand-bg-3 {
     background-image: url("assets/images/bg3.jpg");
 }
-.rand-bg-4{
+
+.rand-bg-4 {
     background-image: url("assets/images/bg4.jpg");
 }
-.rand-bg-5{
+
+.rand-bg-5 {
     background-image: url("assets/images/bg5.jpg");
 }
-.rand-bg-6{
+
+.rand-bg-6 {
     background-image: url("assets/images/bg6.jpg");
 }
-.rand-bg-7{
+
+.rand-bg-7 {
     background-image: url("assets/images/bg7.jpg");
 }
-.rand-bg-8{
+
+.rand-bg-8 {
     background-image: url("assets/images/bg8.jpg");
 }
-.rand-bg-9{
+
+.rand-bg-9 {
     background-image: url("assets/images/bg9.jpg");
 }
-.rand-bg-10{
+
+.rand-bg-10 {
     background-image: url("assets/images/bg10.jpg");
 }
-.dark-bg{
+
+.dark-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -50,7 +61,8 @@ body {
     background-color: rgba(0, 0, 0, .6);
     z-index: 0;
 }
-.foreground-container{
+
+.foreground-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -58,26 +70,54 @@ body {
     height: inherit;
     gap: 50px;
 }
-.timer-container{
+
+.timer-container {
     width: 70%;
     margin: 0 auto;
 }
-.timer-display{
+
+.timer-display {
     font-weight: 700;
 }
+
 .title {
     text-align: center;
     font-size: 72pt;
 }
+
 @media (max-width: 576px) {
     .timer-container {
         width: 100%;
     }
+
     .title {
         font-size: 35pt;
     }
 }
-.sound-container{
+
+.heart-container {
+    text-align: center;
+    position: relative;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    position: absolute;
+    font-size: 72pt;
+}
+
+.heart__1 {
+    animation: beat-out 1s ease-out infinite normal both;
+}
+.heart__2 {
+    animation: beat-out 1s ease-out infinite normal both;
+    display: none;
+}
+
+.sound-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -89,13 +129,38 @@ body {
     z-index: 1;
 
 }
-.sound-button{
+
+.sound-button {
     background: transparent;
     border: none;
 }
-.sound-button > img{
+
+.sound-button>img {
     width: 25px;
 }
-.hidden{
+
+.hidden {
     display: none !important;
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes beat-out {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
 }
