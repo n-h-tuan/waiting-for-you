@@ -53,6 +53,6 @@ setInterval(function () {
     timeDiv.seconds.innerHTML = time.seconds;
 }, 1000);
 
-setTimeout(function () {
-    document.getElementById("second_heart").style.display = "block";
-}, 800)
+// setTimeout(function () {
+//     document.getElementById("second_heart").style.display = "block";
+// }, 800)
